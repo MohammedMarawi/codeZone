@@ -25,6 +25,10 @@ const usersRouter = require('./routes/user.route')
 app.use('/api/courses', coursesRouter) 
 app.use('/api/users' , usersRouter)
 
+app.get('/', (req, res) => {
+  res.json({ status: 'success', message: 'Welcome to the API' });
+});
+
 //global middlware for not found routers
 app.use((req, res, next) => {
     res.status(404).json({
