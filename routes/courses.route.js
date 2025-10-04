@@ -16,3 +16,5 @@ router.route('/:courseId')
             .delete(verifyToken , allowedTo(userRoles.ADMIN , userRoles.MANAGER) ,courseController.deleteCourse)
 
 module.exports = router 
+
+//
